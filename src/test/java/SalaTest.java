@@ -14,20 +14,20 @@ class SalaTest {
     @Test
     @DisplayName("Get código de sala")
     void getCodeId() throws Exception {
-        assertEquals(sala1.getCodeId(), 1);
+        assertEquals(sala1.getCodeID(), 1);
     }
 
     @Test
     @DisplayName("Get código de sala malo")
     void getCodeIdFailure() throws Exception {
-        assertTrue(sala1.getCodeId() != -1);
+        assertTrue(sala1.getCodeID() != -1);
     }
 
     @Test
     @DisplayName("Set código de sala")
     void setCodeId() throws Exception {
-        sala1.setCodeId(2);
-        assertEquals(sala1.getCodeId(), 2);
+        sala1.setCodeID(2);
+        assertEquals(sala1.getCodeID(), 2);
     }
 
     @Test
