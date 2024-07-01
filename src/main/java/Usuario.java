@@ -1,67 +1,59 @@
 public class Usuario {
-
+    private static int contadorIds = 1;
     private int userID;
-    private String name;
-    private String department;
-    private String description;
-    private boolean hasReservation;
+    private String nombre;
+    private String departamento;
+    private String descripcion;
+    private Reserva reserva;
 
-    public Usuario () {
-        this.hasReservation = false;
+    public Usuario(String nombre, String departamento, String descripcion) {
+        this.userID = contadorIds++;
+        this.nombre = nombre;
+        this.departamento = departamento;
+        this.descripcion = descripcion;
+        this.reserva = null;
     }
 
-    public Usuario (int userID, String name, String department, String description, boolean hasReservation) {
-        this.userID = userID;
-        this.name = name;
-        this.department = department;
-        this.description = description;
-        this.hasReservation = hasReservation;
-    }
-
-    public Usuario (int userId, String name, String department, String description) {
-        this.userID = userId;
-        this.name = name;
-        this.department = department;
-        this.description = description;
-    }
-
+    // Getters y setters
     public int getUserID() {
         return userID;
     }
 
-    public void setUserID(int userID) {
-        this.userID = userID;
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getName() {
-        return name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getDepartamento() {
+        return departamento;
     }
 
-    public String getDepartment() {
-        return department;
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public String getDescription() {
-        return description;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public Reserva getReserva() {
+        return reserva;
     }
 
-    public boolean getHasReservation() {
-        return hasReservation;
+    public void setReserva(Reserva reserva) {
+        this.reserva = reserva;
     }
 
-    public void setHasReservation(boolean hasReservation) {
-        this.hasReservation = hasReservation;
+    @Override
+    public String toString() {
+        return String.format("ID: %d, Nombre: %s, Departamento: %s, Descripción: %s",
+                userID, nombre, departamento, descripcion);
     }
 }

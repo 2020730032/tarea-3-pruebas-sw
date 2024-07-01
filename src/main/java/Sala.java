@@ -1,57 +1,52 @@
 public class Sala {
 
-    private int codeID;
-    private String name;
-    private String location;
-    private boolean isUsed;
+    private int numero;
+    private String nombre;
+    private String ubicacion;
+    private Reserva reserva;
 
-    public Sala(int code_id, String name, String location, boolean isUsed) {
-        this.codeID = code_id;
-        this.name = name;
-        this.location = location;
-        this.isUsed = isUsed;
+    public Sala(int numero, String nombre, String ubicacion) {
+        this.numero = numero;
+        this.nombre = nombre;
+        this.ubicacion = ubicacion;
+        this.reserva = null;
     }
 
-    public Sala(int code_id, String name, String location) {
-        this.codeID = code_id;
-        this.name = name;
-        this.location = location;
+    public int getNumero() {
+        return numero;
     }
 
-    public Sala() {
-        this.isUsed = false;
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
-    public int getCodeID() {
-        return codeID;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setCodeID(int codeID) {
-        this.codeID = codeID;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getName() {
-        return name;
+    public String getUbicacion() {
+        return ubicacion;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
 
-    public String getLocation() {
-        return location;
+    public Reserva getReserva() {
+        return reserva;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setReserva(Reserva reserva) {
+        this.reserva = reserva;
     }
 
-    public boolean getIsUsed() {
-        return isUsed;
+    @Override
+    public String toString() {
+        return String.format("Número: %d, Nombre: %s, Ubicacion: %s",
+                numero, nombre, ubicacion);
     }
-
-    public void setIsUsed(boolean isUsed) {
-        this.isUsed = isUsed;
-    }
-
 }
