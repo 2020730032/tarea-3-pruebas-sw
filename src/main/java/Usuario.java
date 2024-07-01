@@ -1,6 +1,6 @@
 public class Usuario {
 
-    private int id;
+    private int userID;
     private String name;
     private String department;
     private String description;
@@ -10,27 +10,27 @@ public class Usuario {
         this.hasReservation = false;
     }
 
-    public Usuario (int id, String name, String department, String description, boolean hasReservation) {
-        this.id = id;
+    public Usuario (int userID, String name, String department, String description, boolean hasReservation) {
+        this.userID = userID;
         this.name = name;
         this.department = department;
         this.description = description;
         this.hasReservation = hasReservation;
     }
 
-    public Usuario (int id, String name, String department, String description) {
-        this.id = id;
+    public Usuario (int userId, String name, String department, String description) {
+        this.userID = userId;
         this.name = name;
         this.department = department;
         this.description = description;
     }
 
-    public int getId() {
-        return id;
+    public int getUserID() {
+        return userID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public String getName() {
