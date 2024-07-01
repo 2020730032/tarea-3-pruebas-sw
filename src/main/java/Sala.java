@@ -1,24 +1,24 @@
-public class Salas {
+public class Sala {
 
     private int codeId;
     private String name;
     private String location;
     private boolean isUsed;
 
-    public Salas(int code_id, String name, String location, boolean isUsed) {
+    public Sala(int code_id, String name, String location, boolean isUsed) {
         this.codeId = code_id;
         this.name = name;
         this.location = location;
         this.isUsed = isUsed;
     }
 
-    public Salas(int code_id, String name, String location) {
+    public Sala(int code_id, String name, String location) {
         this.codeId = code_id;
         this.name = name;
         this.location = location;
     }
 
-    public Salas() {
+    public Sala() {
         this.isUsed = false;
     }
 

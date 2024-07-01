@@ -1,13 +1,13 @@
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-class SalasTest {
+class SalaTest {
 
-    private Salas sala1 = new Salas();
+    private Sala sala1;
 
     @BeforeEach
     public void setUp() throws Exception {
-        sala1 = new Salas(1, "Sala 106", "Edificio P");
+        sala1 = new Sala(1, "Sala 106", "Edificio P");
         sala1.setIsUsed(true);
     }
 
